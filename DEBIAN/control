@@ -1,0 +1,11 @@
+Package: LABA1
+Version: 1.0
+Section: unknown
+Priority: optional
+Depends: libc6
+Architecture: amd64
+Essential: no
+Install-Size: 20
+Maintainer: Dorwai
+Description: Swaps words from start to the end and backwards.
+
