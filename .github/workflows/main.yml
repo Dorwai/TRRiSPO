@@ -1,0 +1,30 @@
+stages:
+  - build
+  - test
+  - package
+
+build_job:
+  stage: build
+    script:
+      - echo "Процесс сборки..."
+      - make
+      artifacts: 
+        paths:
+          - pr1
+
+test_job:
+
+  stage: test
+    script:
+      - echo "Процесс тестирования..."
+      - make test
+      - ./test
+
+package_job:
+  stage: package
+    script:
+      - echo "Процесс запаковки..."
+      - dpkg --build ./Package
+      artifacts:
+        paths:
+          - Package.deb
